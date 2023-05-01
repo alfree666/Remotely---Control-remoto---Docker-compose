@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+
+  remotely:
+    image: immybot/remotely:latest
+    container_name: remotely
+    ports:
+      - "8200:5000"
+    volumes:
+      - ./remotely-data:/remotely-data
+    restart: unless-stopped  
